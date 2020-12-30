@@ -1,0 +1,15 @@
+Zadanie. Zaimplementuj sortowanie gnoma oraz sortowanie kubełkowe.
+1) przedstaw schematy blokowe algorytmów oraz pseudokod odpowiadający obu schematom
+2) przedstaw teoretyczne podstawy obu metod
+3) wykonaj testy porównujące działanie obu metod na różnych próbkach danych i przedstaw ich wyniki w
+sprawozdaniu
+4) omów złożoność obliczeniową obu algorytmów
+5) przedstaw w postaci wykresów t(N) złożoność czasową obu algorytmów dla przypadków oczekiwanego/
+optymistycznego/ pesymistycznego (”odpowiednio preparując” dane do posortowania dla każdego z algorytmów) otrzymaną eksperymentalnie w wyniku serii testów dla rosnących próbek danych N
+6) Sprawozdanie powinno być w formacie PDF
+Cechy programu:
+a) program powinien mieć możliwość odczytywania danych wejściowych z pliku tekstowego i zapisu posortowanego ciągu wynikowego również do pliku tekstowego
+b) na potrzeby wykonywanych testów należy zaimplementować funkcję generującą ”losowe” ciagi elementów
+(o zadanej długości) i zapisującą je do pliku tekstowego
+c) założyć, że sortowanymi elementami są liczby całkowite z przedziału [0, N], gdzie N powinno być ”odpowiednio dużym” parametrem ustalonym wewnątrz programu
+d) kod powinien być opatrzony stosownymi komentarzami
