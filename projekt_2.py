@@ -10,7 +10,23 @@ def sortowanie_gnom(list):
             # a w pythonie jest takie właśnie proste obejście związane z zamianą pozycji,
             pozycja-=1 # gdy lista nie była posortowana i musieliśmy zamienić liczby w liście to musimy zmniejszyć pozycję by sprawdzić czy zamieniona liczba jest w na odpowiednim miejscu
 
-#def sortowanie_kubek(list):
+def sortowanie_kubek(list):
+    a = min(list)
+    b = max(list)
+    kubki = [0]* ((b-a)+1)
+    print(a)
+    print(b)
+    for i in range(0,((b-a))):
+        kubki[i]=list.count(i)
+    print(kubki)
+    list2 = []
+    for i in range(0, ((b - a) + 1)):
+        for x in range(0,kubki[i]):
+            list2.append(i)
+    print(list2)
+
+
+
 
 ''' for x in f:
     x = x.replace("\n", "")
@@ -19,5 +35,6 @@ list1 =[]
 for i in range(0,100):
     list1.append(random.randint(0,100))
 print(list1)
-sortowanie_gnom(list1)
-print(list1)
+#sortowanie_gnom(list1)
+#print(list1)
+sortowanie_kubek(list1)
