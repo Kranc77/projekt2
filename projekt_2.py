@@ -15,22 +15,34 @@ def sortowanie_gnom(list):
 def sortowanie_kubek(list):
     a = min(list) # wykorzystałem funkcję min i max dostępne w pyhtonie
     b = max(list)
-    kubki = [0]* ((b-a)+1) # wzór znaleziony w internecie który na podstawie zróżnicowania liczb określa ile kubeczków stworzymy
-    for i in range(0,((b-a))):
+    kubki = [0]* (len(list)+1)
+    for i in range(a,b+1):
         kubki[i]=list.count(i)
     print(kubki)
     licznik = 0 # zmienna mówiąca nam o indeksach listy
-    for i in range(0, ((b - a) + 1)): # sprawdzamy podany przedział
+    for i in range(a,b+1): # sprawdzamy podany przedział
         for x in range(0,kubki[i]): # pętla zamieniające ineksy listy INDEKSAMI kubeczków w zależności od WARTOŚCI kubeczka
             list[licznik]=i
             licznik+=1
+def sortowanie_kubek_v2(list,n):
+    a = min(list)
+    b = max(list)
+    kubki = [n-1]
+    for i in range(0,((b-a))):
+        kubki[i]=list.count(i)
+    print(kubki)
+    licznik = 0
+    for i in range(0, ((b - a) + 1)):
+        for x in range(0,kubki[i]):
+            list[licznik]=i
+            licznik+=1
 list1 =[]
-for i in range(0,10000):
-    list1.append(random.randint(0,100))
+for i in range(0,20):
+    list1.append(random.randint(0,10))
 print(list1)
 start = time.time()
-sortowanie_gnom(list1)
-#sortowanie_kubek(list1)
+#sortowanie_gnom(list1)
+sortowanie_kubek(list1)
 print(list1)
 end = time.time()
 total = end - start
