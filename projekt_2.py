@@ -32,10 +32,10 @@ zapis = open("wyniki.txt", "w")
 zapis.write("Nieposortowane liczby z pliku plik.txt: \n")
 for i in list1:
     zapis.write(str(i)+", ")
-#f=open("plik.txt") # otwarcie pliku
-#for x in f:
- #   x = x.replace("\n", "")
- #   list1.append(int(x)) #dodawanie do listy elementów które są oddzielane znakiem /n czyli enterem(są w nowej lini)
+f=open("plik.txt") # otwarcie pliku
+for x in f:
+    x = x.replace("\n", "")
+    list1.append(int(x)) #dodawanie do listy elementów które są oddzielane znakiem /n czyli enterem(są w nowej lini)
 print(list1)
 #list1.sort() #- funckja stosowana by posortować wcześniej listę dla sprawdzenia przypadku optymistycznego
 #list1.reverse() #- funckja stosowana by odwrócić posortowaną wcześniej listę dla sprawdzenia przypadku pesymistycznego
