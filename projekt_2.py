@@ -25,25 +25,28 @@ def sortowanie_kubek(list):
             licznik+=1
 list1 =[]
 #losowe liczby na potrzeby prób
-for i in range(0,10000): # ilość danych
+'''for i in range(0,1000): # ilość danych
     #list1.append(random.randint(0,1000000))# zróżnicowanie danych
-    list1.append(i)
+    list1.append(i)''' # zapis danych do listy w celu porównywania algorytmów
+zapis = open("wyniki.txt", "w")
+zapis.write("Nieposortowane liczby z pliku plik.txt: \n")
+for i in list1:
+    zapis.write(str(i)+", ")
 #f=open("plik.txt") # otwarcie pliku
 #for x in f:
  #   x = x.replace("\n", "")
  #   list1.append(int(x)) #dodawanie do listy elementów które są oddzielane znakiem /n czyli enterem(są w nowej lini)
 print(list1)
-list1.sort()
-list1.reverse()
+#list1.sort() #- funckja stosowana by posortować wcześniej listę dla sprawdzenia przypadku optymistycznego
+#list1.reverse() #- funckja stosowana by odwrócić posortowaną wcześniej listę dla sprawdzenia przypadku pesymistycznego
 print(list1)
-start = time.time()
-#sortowanie_gnom(list1)
+start = time.time() # funkcja pozwalająca mierzyć czas
+sortowanie_gnom(list1)
 sortowanie_kubek(list1)
 print(list1)
-end = time.time()
+end = time.time() # funkcja pozwalająca mierzyć czas
 total = end - start
-zapis = open("wyniki.txt", "w")
-zapis.write("Posortowane liczby z pliku plik.txt: \n")
+zapis.write("\nPosortowane liczby z pliku plik.txt: \n")
 #zapis wyników do pliku "wyniki"
 for i in list1:
     zapis.write(str(i)+", ")
