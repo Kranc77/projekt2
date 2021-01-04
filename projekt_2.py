@@ -18,15 +18,23 @@ def sortowanie_kubek(list):
     kubki = [0]* ((b-a)+1) # tworzę możliwie najmnije kubełków
     for i in range(0,((b-a)+1)):
         kubki[i] = list.count(a+i) # przypisanie do pierwszego kubełka ilości najmniejszych wartości
-    print(kubki)
     licznik = 0 # zmienna mówiąca nam o indeksach listy
     for i in range(0,((b-a)+1)): # sprawdzamy podany przedział
         for x in range(0,kubki[i]): # pętla zamieniające ineksy listy INDEKSAMI kubeczków w zależności od WARTOŚCI kubeczka
             list[licznik]=a+i
             licznik+=1
 list1 =[]
-for i in range(0,1000): # ilość danych
-    list1.append(random.randint(0,100000))# zróżnicowanie danych
+#losowe liczby na potrzeby prób
+for i in range(0,10000): # ilość danych
+    #list1.append(random.randint(0,1000000))# zróżnicowanie danych
+    list1.append(i)
+#f=open("plik.txt") # otwarcie pliku
+#for x in f:
+ #   x = x.replace("\n", "")
+ #   list1.append(int(x)) #dodawanie do listy elementów które są oddzielane znakiem /n czyli enterem(są w nowej lini)
+print(list1)
+list1.sort()
+list1.reverse()
 print(list1)
 start = time.time()
 #sortowanie_gnom(list1)
@@ -34,4 +42,11 @@ sortowanie_kubek(list1)
 print(list1)
 end = time.time()
 total = end - start
+zapis = open("wyniki.txt", "w")
+zapis.write("Posortowane liczby z pliku plik.txt: \n")
+#zapis wyników do pliku "wyniki"
+for i in list1:
+    zapis.write(str(i)+", ")
+zapis.write("\nCzas ich sortowania(w sekundach) to: \n")
+zapis.write(str(total))
 print(total)
