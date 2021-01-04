@@ -1,0 +1,6 @@
+Nieposortowane liczby z pliku plik.txt: 
+
+Posortowane liczby z pliku plik.txt: 
+0, 0, 0, 1, 1, 1, 4, 4, 5, 10, 11, 11, 11, 23, 31, 31, 213, 213, 21321, 312312, 2131254, 
+Czas ich sortowania(w sekundach) to: 
+0.9501376152038574
